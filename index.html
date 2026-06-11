@@ -1,11 +1,275 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>홈</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6741771168968085" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIJI STRING - 테니스·배드민턴 경기기록 & 스트링 관리 앱</title>
+<meta name="description" content="테니스, 배드민턴, 피클볼 경기 기록과 스트링 관리를 한 번에. 승률 통계, 대회 관리, 선수 관리까지 모두 무료로 사용하세요.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6741771168968085" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #0f0f13;
+    color: #e0e0f0;
+    min-height: 100vh;
+  }
+
+  /* 헤더 */
+  header {
+    text-align: center;
+    padding: 48px 20px 32px;
+    border-bottom: 1px solid #2e2e3e;
+  }
+  .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #7c6af7, #f76ac8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  .tagline {
+    font-size: 0.95rem;
+    color: #7a7a95;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 36px;
+    background: linear-gradient(135deg, #7c6af7, #6a5be0);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: opacity 0.2s;
+  }
+  .btn-download:hover { opacity: 0.85; }
+  .btn-download svg { width: 22px; height: 22px; fill: white; }
+
+  /* 광고 영역 */
+  .ad-wrap {
+    max-width: 600px;
+    margin: 28px auto;
+    padding: 0 16px;
+    text-align: center;
+  }
+  .ad-label {
+    font-size: 0.7rem;
+    color: #555570;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+
+  /* 기능 소개 */
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 32px 16px;
+  }
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #9d8ffa;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  .card {
+    background: #1a1a22;
+    border: 1px solid #2e2e3e;
+    border-radius: 16px;
+    padding: 20px 18px;
+  }
+  .card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .card h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c4b9ff;
+    margin-bottom: 8px;
+  }
+  .card p {
+    font-size: 0.88rem;
+    color: #9090b0;
+    line-height: 1.7;
+  }
+
+  /* 앱 정보 */
+  .app-info {
+    background: rgba(124, 106, 247, 0.08);
+    border: 1px solid rgba(124, 106, 247, 0.25);
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .app-info p {
+    font-size: 0.88rem;
+    color: #9d8ffa;
+    line-height: 1.8;
+  }
+  .app-info strong { color: #c4b9ff; }
+
+  /* 서비스 소개 */
+  .shop-section {
+    background: #1a1a22;
+    border: 1px solid #2e2e3e;
+    border-radius: 16px;
+    padding: 22px 18px;
+    margin-bottom: 14px;
+  }
+  .shop-section h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #c4b9ff;
+    margin-bottom: 10px;
+  }
+  .shop-section p {
+    font-size: 0.85rem;
+    color: #9090b0;
+    line-height: 1.7;
+  }
+
+  /* 푸터 */
+  footer {
+    border-top: 1px solid #2e2e3e;
+    padding: 24px 16px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  footer p {
+    font-size: 0.78rem;
+    color: #555570;
+    line-height: 1.8;
+  }
+  footer a {
+    color: #7c6af7;
+    text-decoration: none;
+  }
+</style>
 </head>
 <body>
-    <p>안녕하세요</p>
+
+<!-- 헤더 -->
+<header>
+  <div class="logo">NIJI STRING</div>
+  <p class="tagline">
+    테니스 · 배드민턴 · 피클볼<br>
+    경기 기록 & 스트링 관리 앱
+  </p>
+  <a class="btn-download" href="https://play.google.com/store/apps/details?id=io.github.niji7120.twa" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76c.3.17.65.19.97.07l12.19-7.03-2.65-2.65-10.51 9.61zM.36 1.19C.13 1.54 0 2.01 0 2.59v18.82c0 .58.13 1.05.37 1.4l.07.07 10.54-10.54v-.25L.43 1.12l-.07.07zM20.1 10.37l-2.93-1.69-2.97 2.97 2.97 2.97 2.95-1.7c.84-.49.84-1.28-.02-1.55zM3.18.24L15.37 7.27 12.72 9.92 2.21.31c.32-.12.67-.1.97-.07z"/></svg>
+    Google Play 무료 다운로드
+  </a>
+</header>
+
+<!-- 광고 (헤더 아래) -->
+<div class="ad-wrap">
+  <p class="ad-label">ADVERTISEMENT</p>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-6741771168968085"
+       data-ad-slot="auto"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<main>
+
+  <p class="section-title">✨ 주요 기능</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🎾</div>
+      <h2>경기 기록</h2>
+      <p>테니스, 배드민턴, 피클볼 경기 결과를 간편하게 기록하세요. 단식·복식 모두 지원하며 스코어·메모도 남길 수 있어요.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h2>승률 통계</h2>
+      <p>상대별 전적, 파트너 궁합, 월별 승률 그래프를 자동으로 분석해줘요. 나의 실력 향상이 한눈에 보여요.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏆</div>
+      <h2>대회 관리</h2>
+      <p>토너먼트 대진표를 자동으로 생성하고 라운드별 결과를 기록해요. 동호회 리그전도 손쉽게 운영할 수 있어요.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎵</div>
+      <h2>스트링 관리</h2>
+      <p>라켓 스트링 교체일과 게임 수를 추적해요. 교체 시기를 색상으로 알려줘요 — 🟢 양호 / 🟡 주의 / 🔴 교체 권장</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">👥</div>
+      <h2>선수 관리</h2>
+      <p>함께 치는 동호인들을 등록하고 전적을 관리하세요. 클럽 단위로 묶어서 관리할 수 있어요.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📺</div>
+      <h2>실시간 스코어보드</h2>
+      <p>경기 중 실시간 스코어를 큰 화면으로 표시해요. 블루투스 리모컨 연동으로 손쉽게 점수를 기록할 수 있어요.</p>
+    </div>
+  </div>
+
+  <!-- 광고 (기능 소개 아래) -->
+  <div class="ad-wrap" style="padding:0; margin-bottom:28px;">
+    <p class="ad-label">ADVERTISEMENT</p>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6741771168968085"
+         data-ad-slot="auto"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="app-info">
+    <p>
+      📱 Google Play에서 <strong>NIJI STRING</strong> 검색<br>
+      모든 데이터는 클라우드에 안전하게 저장됩니다<br>
+      <span style="color:#7a7a95;">테니스 · 배드민턴 · 피클볼 동호인을 위한 앱</span>
+    </p>
+  </div>
+
+  <!-- 샵 소개 -->
+  <p class="section-title">🏪 NIJI STRING 샵 소개</p>
+
+  <div class="shop-section">
+    <h3>🎾 라켓 스트링 전문</h3>
+    <p>서울 동대문구에 위치한 테니스·배드민턴·피클볼 라켓 스트링 전문샵입니다. 다양한 스트링을 보유하고 있으며 빠르고 정확한 스트링 작업을 제공합니다.</p>
+  </div>
+
+
+
+</main>
+
+<!-- 푸터 -->
+<footer>
+  <p>
+    © 2024 NIJI STRING · 서울 동대문구<br>
+    <a href="privacy.html">개인정보처리방침</a>
+  </p>
+</footer>
+
 </body>
 </html>
